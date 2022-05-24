@@ -5,14 +5,14 @@
 CockroachDB is basically a `key-value` store.
 
 <p float="left">
-    <img src="pix/kv_mappings.png" width="600" />
+    <img src="pix/kv_mappings.png" width="550" />
 </p>
 
 * CockroachDB prioritizes `consistency` over `availability`.
 * CockroachDB prioritizes `transactional` workloads over `analytic` workloads.
 
 <p float="left">
-    <img src="pix/cap.png" width="400" />
+    <img src="pix/cap.png" width="450" />
 </p>
 
 * `Scalability`: The CockroachDB distributed architecture allows a cluster to scale seamlessly as workload increases or decreases.
