@@ -24,7 +24,7 @@
 ## CockroachDB architecture
 
 <p float="left">
-    <img src="pix/layered_process.png" width="400" />
+    <img src="pix/layered_process.png" width="300" />
 </p>
 
 * The `SQL layer` accepts SQL requests in the PostgreSQL wire protocol. It parses and optimizes the SQL requests and translates the requests into KV operations that can be processed by lower layers.
