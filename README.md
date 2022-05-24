@@ -3,14 +3,14 @@
 ## CockroachDB overview
 
 <p float="left">
-    <img src="pix/cap.png" width="500" />
+    <img src="pix/cap.png" width="400" />
 </p>
 
 * CockroachDB prioritizes consistency over availability.
 * CockroachDB prioritizes transactional workloads over analytic workloads.
 
 <p float="left">
-    <img src="pix/kv_mappings.png" width="650" />
+    <img src="pix/kv_mappings.png" width="600" />
 </p>
 
 * `Scalability`: The CockroachDB distributed architecture allows a cluster to scale seamlessly as workload increases or decreases.
