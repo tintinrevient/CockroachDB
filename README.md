@@ -3,14 +3,14 @@
 ## CockroachDB overview
 
 <p float="left">
-    <img src="pix/cap.png" width="400" />
+    <img src="pix/kv_mappings.png" width="600" />
 </p>
 
 * CockroachDB prioritizes `consistency` over `availability`.
 * CockroachDB prioritizes `transactional` workloads over `analytic` workloads.
 
 <p float="left">
-    <img src="pix/kv_mappings.png" width="600" />
+    <img src="pix/cap.png" width="400" />
 </p>
 
 * `Scalability`: The CockroachDB distributed architecture allows a cluster to scale seamlessly as workload increases or decreases.
@@ -24,7 +24,7 @@
 ## CockroachDB architecture
 
 <p float="left">
-    <img src="pix/layered_process.png" width="300" />
+    <img src="pix/layered_process.png" width="350" />
 </p>
 
 * The `SQL layer` accepts SQL requests in the PostgreSQL wire protocol. It parses and optimizes the SQL requests and translates the requests into KV operations that can be processed by lower layers.
@@ -34,6 +34,6 @@
 * The `storage layer` is responsible for the persistence of data to local disk and the processing of low-level queries and updates on that data.
 
 <p float="left">
-    <img src="pix/lsm_writes.png" width="400" />
-    <img src="pix/lsm_reads.png" width="400" />
+    <img src="pix/lsm_writes.png" width="450" />
+    <img src="pix/lsm_reads.png" width="450" />
 </p>
