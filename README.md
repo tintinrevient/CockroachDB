@@ -6,8 +6,8 @@
     <img src="pix/cap.png" width="400" />
 </p>
 
-* CockroachDB prioritizes consistency over availability.
-* CockroachDB prioritizes transactional workloads over analytic workloads.
+* CockroachDB prioritizes `consistency` over `availability`.
+* CockroachDB prioritizes `transactional` workloads over `analytic` workloads.
 
 <p float="left">
     <img src="pix/kv_mappings.png" width="600" />
