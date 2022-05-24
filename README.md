@@ -2,7 +2,7 @@
 
 ## CockroachDB overview
 
-* CockroachDB is basically a `key-value` store.
+CockroachDB is basically a `key-value` store.
 
 <p float="left">
     <img src="pix/kv_mappings.png" width="600" />
@@ -37,5 +37,5 @@
 
 <p float="left">
     <img src="pix/lsm_writes.png" width="450" />
-    <img src="pix/lsm_reads.png" width="500" />
+    <img src="pix/lsm_reads.png" width="550" />
 </p>
