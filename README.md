@@ -34,6 +34,6 @@
 * The `storage layer` is responsible for the persistence of data to local disk and the processing of low-level queries and updates on that data.
 
 <p float="left">
-    <img src="pix/lsm_writes.png" width="40" />
-    <img src="pix/lsm_reads.png" width="40" />
+    <img src="pix/lsm_writes.png" width="400" />
+    <img src="pix/lsm_reads.png" width="400" />
 </p>
