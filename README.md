@@ -10,7 +10,7 @@
 * CockroachDB prioritizes transactional workloads over analytic workloads.
 
 <p float="left">
-    <img src="pix/kv_mappings.png" width="500" />
+    <img src="pix/kv_mappings.png" width="650" />
 </p>
 
 * `Scalability`: The CockroachDB distributed architecture allows a cluster to scale seamlessly as workload increases or decreases.
