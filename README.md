@@ -96,3 +96,19 @@ cockroach workload run kv --duration 10s
   -9199073458229546255 | f
   -9187217482832003982 | i
 ```
+
+## Example statements
+
+Bounded stale reads can be used to optimize performance in distributed deployments by allowing CockroachDB to satisfy the read from local replicas that may contain slightly stale data:
+```sql
+SELECT * FROM rides r
+    AS OF SYSTEM TIME with_max_staleness('10s')
+ WHERE city='amsterdam'
+   AND id='aaaae297-396d-4800-8000-0000000208d6';
+   
+SELECT * FROM rides r
+   AS OF SYSTEM TIME '-1d';
+
+SELECT * FROM rides r
+   AS OF SYSTEM TIME '2021-5-22 18:02:52.0+00:00';
+```
