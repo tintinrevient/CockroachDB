@@ -112,3 +112,7 @@ SELECT * FROM rides r
 SELECT * FROM rides r
    AS OF SYSTEM TIME '2021-5-22 18:02:52.0+00:00';
 ```
+
+## References
+
+* https://www.cockroachlabs.com/docs/stable/sql-feature-support.html
