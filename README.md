@@ -40,7 +40,81 @@ CockroachDB is basically a `key-value` store.
     <img src="pix/lsm_reads.png" width="550" />
 </p>
 
+## CockroachDB installation
+
+1. Download the binaries from [the releases](https://www.cockroachlabs.com/docs/releases/index.htm). 
+
+2. Unzip and move the binaries to `/usr/local/bin`:
+```bash
+tar zxvf cockroach-v22.1.0.darwin-10.9-amd64.tgz
+cp -r cockroach-v22.1.0.darwin-10.9-amd64/* /usr/local/bin
+```
+
+3. Start a temporary, in-memory CockroachDB cluster of 1 node: 
+```bash
+cockroach demo
+```
+
+4. Start a persistent, insecure CockroachDB cluster of 1 node: 
+```bash
+cockroach start-single-node --insecure --listen-addr=localhost
+```
+
+5. Connect to the CockroachDB cluster from a client:
+```bash
+cockroach sql --insecure
+```
+
+6. Generate some dummy key-value data:
+```bash
+cockroach workload init kv
+cockroach workload run kv --duration 10s
+```
+
+7. Show the dummy key-value data:
+```sql
+> show databases;
+  database_name | owner | primary_region | regions | survival_goal
+----------------+-------+----------------+---------+----------------
+  defaultdb     | root  | NULL           | {}      | NULL
+  kv            | root  | NULL           | {}      | NULL
+  postgres      | root  | NULL           | {}      | NULL
+  system        | node  | NULL           | {}      | NULL
+  
+> use kv;
+> show tables;
+    schema_name | table_name | type  | owner | estimated_row_count | locality
+--------------+------------+-------+-------+---------------------+-----------
+  public      | kv         | table | root  |                3217 | NULL
+
+> select * from kv limit 5;
+           k           |  v
+-----------------------+-------
+  -9210704934152406691 | \x87
+  -9203392377336618164 | \xf2
+  -9202077040322140143 | \xe5
+  -9199073458229546255 | f
+  -9187217482832003982 | i
+```
+
+## Example statements
+
+Bounded stale reads can be used to optimize performance in distributed deployments by allowing CockroachDB to satisfy the read from local replicas that may contain slightly stale data:
+```sql
+SELECT * FROM rides r
+    AS OF SYSTEM TIME with_max_staleness('10s')
+ WHERE city='amsterdam'
+   AND id='aaaae297-396d-4800-8000-0000000208d6';
+   
+SELECT * FROM rides r
+   AS OF SYSTEM TIME '-1d';
+
+SELECT * FROM rides r
+   AS OF SYSTEM TIME '2021-5-22 18:02:52.0+00:00';
+```
+
 ## References
 
+* https://www.cockroachlabs.com/docs/stable/sql-feature-support.html
 * https://www.cockroachlabs.com/docs/stable/developer-guide-overview.html
 * https://stackoverflow.com/questions/15143837/how-to-multi-thread-an-operation-within-a-loop-in-python
