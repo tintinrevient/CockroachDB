@@ -21,6 +21,7 @@ batch_size = 10_0000
 connection = happybase.Connection(host="0.0.0.0")
 connection.open()
 
+
 def create_table() -> None:
     connection.create_table(
         'names',

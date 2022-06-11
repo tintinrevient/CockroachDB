@@ -10,6 +10,9 @@ batch_num = 10
 batch_size = 10_0000
 
 # database setup
+# brew services start postgresql
+# psql
+
 # create user admin with encrypted password 'admin';
 # grant usage on schema featurestore to admin;
 # grant select, delete, update, insert on all tables in schema featurestore to admin;

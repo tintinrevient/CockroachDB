@@ -10,10 +10,8 @@ batch_num = 10
 batch_size = 10_0000
 
 # database setup
-# create user admin with encrypted password 'admin';
-# grant usage on schema featurestore to admin;
-# grant select, delete, update, insert on all tables in schema featurestore to admin;
-# grant usage on FeatureStore.ServingFeatureIdSec_seq to admin;
+# cockroach start-single-node --insecure --listen-addr=localhost
+# cockroach sql --insecure
 conn = psycopg2.connect(
     host="localhost",
     port="26257",

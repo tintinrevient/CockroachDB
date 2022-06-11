@@ -12,10 +12,8 @@ batch_num = 10
 batch_size = 10_0000
 
 # database setup
-# create user admin with encrypted password 'admin';
-# grant usage on schema featurestore to admin;
-# grant select, delete, update, insert on all tables in schema featurestore to admin;
-# grant usage on FeatureStore.ServingFeatureIdSec_seq to admin;
+# cockroach start-single-node --insecure --listen-addr=localhost
+# cockroach sql --insecure
 pool = psycopg2.pool.ThreadedConnectionPool(
     minconn=10,
     maxconn=40,
@@ -25,6 +23,7 @@ pool = psycopg2.pool.ThreadedConnectionPool(
     user="admin",
     password="admin"
 )
+
 
 def create_table() -> None:
     conn = pool.getconn()
