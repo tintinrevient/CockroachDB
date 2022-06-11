@@ -39,3 +39,8 @@ CockroachDB is basically a `key-value` store.
     <img src="pix/lsm_writes.png" width="450" />
     <img src="pix/lsm_reads.png" width="550" />
 </p>
+
+## References
+
+* https://www.cockroachlabs.com/docs/stable/developer-guide-overview.html
+* https://stackoverflow.com/questions/15143837/how-to-multi-thread-an-operation-within-a-loop-in-python

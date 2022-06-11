@@ -10,6 +10,7 @@ batch_size = 10_0000
 # start hbase service + thrift service - by default, the thrift service listens on port 9090
 # start-hbase.sh
 # hbase-daemon.sh start thrift
+
 # hbase shell
 # list
 # disable "names"
