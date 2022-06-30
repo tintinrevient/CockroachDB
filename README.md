@@ -13,7 +13,7 @@ CockroachDB is basically a `key-value` store.
 
 <p float="left">
     <img src="pix/cap.png" width="450" />
-    <img src="pix/cap_2.png" width="300" />
+    <img src="pix/cap_2.png" width="350" />
 </p>
 
 * `Scalability`: The CockroachDB distributed architecture allows a cluster to scale seamlessly as workload increases or decreases.
