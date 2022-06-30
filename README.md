@@ -97,6 +97,19 @@ cockroach workload run kv --duration 10s
   -9187217482832003982 | i
 ```
 
+8. Go to http://localhost:8080/ after login with the username `demo` and password `demo`:
+```sql
+> show roles;
+  username | options | member_of
+-----------+---------+------------
+  admin    |         | {}
+  demo     |         | {admin}
+  root     |         | {admin}
+(3 rows)
+
+> alter user demo with password 'demo';
+```
+
 ## Example statements
 
 Bounded stale reads can be used to optimize performance in distributed deployments by allowing CockroachDB to satisfy the read from local replicas that may contain slightly stale data:
