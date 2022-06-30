@@ -132,3 +132,7 @@ SELECT * FROM rides r
 * https://www.cockroachlabs.com/docs/stable/sql-feature-support.html
 * https://www.cockroachlabs.com/docs/stable/developer-guide-overview.html
 * https://stackoverflow.com/questions/15143837/how-to-multi-thread-an-operation-within-a-loop-in-python
+* https://github.com/apache/cassandra
+* https://docs.datastax.com/en/developer/python-driver/3.25/getting_started/
+* https://stackoverflow.com/questions/22920678/cassandra-batch-insert-in-python
+* https://stackoverflow.com/questions/48350487/cassandra-fastest-way-to-insert

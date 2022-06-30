@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     start = time.time()
 
-    with  concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(insert_tuples, batch_idx) for batch_idx in range(batch_num)]
         concurrent.futures.wait(futures)
 
